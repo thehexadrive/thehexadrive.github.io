@@ -1,0 +1,672 @@
+﻿*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS of entire contents of webpage */
+html{
+    scroll-behavior: smooth;
+    font-size:10px
+}
+
+/* Navbar CSS */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+/* Navbar width, margin, padding */
+.contain{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}	
+
+/* Width, alignment, border, height for navbar */
+.nav{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    transition: height .5s ease;
+}
+
+/* Navbar links styling */
+.nav a{
+	font-size: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+/* List of navbar links styling */
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 4rem;
+    margin-top: 7px;
+}
+
+
+/*  */
+.nav-link{
+    margin: 0 1rem;
+    position: relative;
+    font-size:10px
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+#nav-cta{
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(207,103,87);
+    transition: background-color .5s ease;
+}
+
+#nav-cta:hover{
+    background-color: #d3d3d3;
+}
+
+.nav .logo{
+	height: 75%;
+}
+
+
+/*Apply styles after scroll*/
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active #nav-cta{
+    background-color: #313131;
+    color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+    background-color: #151515;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: #313131;
+}
+
+
+/*Apply styles after scroll end*/
+
+
+/* Hero Demo Content*/
+.image1{
+    background: url("road.jpeg") no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.header{
+    font-size: 64px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+.text{
+	font-size: 18px;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.para{
+    border-style: solid;
+    border-width: 7px;
+    border-color: white;
+	padding: 20px;
+	background-color: rgba(207,103,87,0.8)
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.hero::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+#home .column {
+	float: left;
+	width: 50%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+#home img {
+	padding-top: 3%;
+}
+
+
+/* Our Team Section */
+
+#team .column {
+	float: left;
+	width: 33.3%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+#team .card {
+	box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.2);
+	margin: 8px;
+	transition: box-shadow 0.3s;
+}
+
+#team .card:hover {
+	box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+#team .container {
+	padding: 0 16px;
+}
+
+#team .container::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#team .title {
+	color: grey;
+}
+
+#team .button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 6px;
+	color: white;
+	background-color: rgb(207,103,87);
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size:13px;
+	transition: 0.3s;
+}
+
+#team .button:hover {
+	background-color: #555;
+}
+
+#team {
+	padding:85px 70px 70px 70px;
+	background-color:#fffff0;
+}
+
+#team h2 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-family: 'Comfortaa', cursive;
+	margin-bottom: 30px;
+	padding: 7px;
+	text-decoration: overline underline;
+	text-decoration-color: rgb(207,103,87);
+	text-decoration-style: wavy;
+	text-align: center;
+}
+
+#team .card-text {
+	padding:15px;
+}
+
+
+/* Features Section CSS */
+
+#features .column {
+	float: left;
+	width: 25%;
+	padding: 0 5px;
+}
+
+#features h3 {
+	color: rgb(207,103,87);
+	font-family: comfortaa;
+}
+
+#features .column2 {
+	float: left;
+	width: 33.3%;
+	padding: 0 5px;
+}
+
+#features .row {
+	margin: 0 -5px;
+}
+
+#features .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+#features .card {
+	padding: 16px;
+	text-align: center;
+	background-color: rgba(207,103,87,0);
+	color: white;
+	border-style: solid;
+	border-width: 0px;
+	
+}
+
+#features .fas {
+	font-size:50px;
+}
+
+#features {
+	padding: 85px;
+	padding-bottom:98px;
+	background-color: #353839;
+}
+
+#features .feature-list {
+	border-style: dotted;
+	border-width: 5px;
+	border-color: white;
+	padding: 15px;
+}
+
+
+/* Structure and Design Section CSS */
+
+#design {
+	padding: 85px 70px 70px 70px;
+	background-color:#fffff0;
+}
+
+#design .column {
+	float: left;
+	width: 50%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+#design .col1 {
+	width: 65%;
+}
+
+#design .col2 {
+	width: 35%;
+	font-size:15px;
+	padding-top: 10%;
+	font-family: 'montserrat';
+}
+
+#design .row {
+	margin: 0 -5px;
+}
+
+#design .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+/* Work Section CSS */
+
+#work {
+	padding: 85px 70px 70px 70px;
+	background-color: #353839;
+}
+
+#work .column {
+	float: left;
+	width: 25%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+#work .row {
+	margin: 0 -5px;
+}
+
+#work .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#work .work-card {
+	box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.2);
+	border: solid 2px rgb(207,103,87);
+	border-radius: 5px;
+	padding: 20px 40px;
+	text-align: center;
+	transition: 0.3s;
+	color: white;
+	font-family: comfortaa;
+	font-size: 15px;
+}
+
+#work .work-card:hover {
+	box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+/* Pricing Section CSS */
+
+.price {
+	list-style-type: none;
+	border: 1px solid #eee;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	margin-right: 70px;
+	margin-left: 70px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	transition: 0.5s;
+}
+
+.price:hover{
+	box-shadow: 0 25px 30px 0 rgba(0, 0, 0, 1);
+}
+
+.price .header {
+	background-color: rgb(207,103,87);
+	color: white;
+	font-size: 28px;
+	font-family:'Comfortaa';
+}
+
+.price li {
+	border-bottom: 1px solid #eee;
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	font-family:'Montserrat';
+	background-color: white;
+}
+
+.price .grey {
+	background-color: #eee;
+	font-size: 20px;
+}
+
+.price .button {
+	background-color: rgb(207,103,87);
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	transition: 0.3s
+}
+
+.price .button:hover {
+	padding:13px 32px;
+}
+
+@media only screen and (max-width: 600px) {
+	.number1 {
+		width: 100%;
+	}
+}
+
+#pricing {
+	padding: 85px 70px 70px 70px;
+	background-color: #353839;
+}
+
+
+#pricing .number1 {
+	border-right-style: solid;
+	border-color: #cf6757;
+	float: center;
+	width: 25%;
+	padding: 8px;
+	margin:auto;
+}
+
+/* Coupons */
+.coupon {
+	border: 5px dotted white;
+	width: auto;
+	border-radius: 15px;
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	max-width: 800px;
+	transition: 0.3s;
+}
+
+.coupon:hover {
+	margin-right: 40px;
+	margin-left: 40px;
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+
+.coupon .container img {
+	padding-top:7px;
+	padding-bottom: 7px;
+}
+
+main-img {
+	width: 100%;
+    height: 10px;
+    background-size: cover;
+}
+
+.coupon .container {
+	padding: 8px 16px;
+	background-color: #f1f1f1;
+	font-size: 13px; 
+}
+
+.promo {
+	background: #ccc;
+	padding: 3px;
+}
+
+.expire {
+	color: red;
+}
+
+.container h2 {
+	font-family: 'comfortaa';
+	color: rgb(207,103,87)
+}
+
+#pricing .column {
+	float: left;
+	padding: 0 5px;
+	width: 50%;
+}
+
+
+#pricing .row {
+	margin: 0 -5px;
+}
+
+#pricing .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+/* Contact Section */
+#contact {
+	padding:85px 70px 70px 70px;
+	background-color:#fffff0;
+}
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	font-size: 14px;
+	font-family: 'montserrat';
+	transition: 0.1s;
+}
+
+#name:focus, #email:focus, #country:focus, #subject:focus {
+	border: 1px solid rgb(207,103,87);
+	outline:0;
+}
+	
+#coffee {
+	border-radius: 25px;
+}
+
+.bottom-left {
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	font-size: 13px;
+	font-family: 'comfortaa';
+	color: white;
+	background-color: rgba(207,103,87,0.9);
+	padding: 8px 15px;
+	border: 2px solid white;
+}
+
+.bottom-left a {
+	color: white;
+	text-decoration: underline;
+}
+
+.image-container {
+	position: relative;
+}
+
+label {
+	font-size: 15px;
+	font-family: 'comfortaa';
+	color: rgb(207,103,87);
+}
+
+input[type=submit] {
+	background-color: rgb(207,103,87);
+	color: white;
+	font-size: 14px;
+	padding: 9px 18px;
+	border: 2px solid rgb(207,103,87);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+input[type=submit]:hover {
+	border: 2px solid lightgray;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	margin-top: 6px;
+	padding: 20px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	.column, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+
+
+
+/* Footer CSS */
+
+.footer {
+	padding: 40px 70px;
+	background-color: #1f2021;
+}
+
+.footer-text {
+	color: white;
+	font-size: 11px;
+}
+
+.copyright {
+	color: white;
+	font-size: 12px;
+}
